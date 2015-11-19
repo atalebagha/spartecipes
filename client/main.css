@@ -21,9 +21,6 @@
   font-size: 3em;
 }
 
-#searchInputArea {
-  display: inline-block;
-}
 
 #label {
   color: white;
@@ -44,9 +41,9 @@
   width: 700px;
   background: transparent;
   border: none;
-  /*color: #FFF;*/
+  color: #FFF;
   font-family: inherit;
-  /*font-size: 2em;*/
+  font-size: 2em;
 }
 
 #searchtext:focus {

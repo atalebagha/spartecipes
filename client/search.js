@@ -22,10 +22,10 @@ $.fn.setCursorPosition = function(pos) {
 
 // intialize
 $(document).ready(function() {
-  $()
   // cache variables
+  angular.element(document.getElementById('HeaderController')).scope().changeState('main');
   var $search = $('#search');
-  var $searchtext = $('#searchtextBS');
+  var $searchtext = $('#searchtext');
   // on any keydown, start parsing keyboard input
   var str = "";
   $(document).keydown(function(e) {
@@ -37,7 +37,7 @@ $(document).ready(function() {
           $searchtext.blur().hide();
           break;
         case 13:
-          angular.element(document.getElementById('HeaderController')).scope().changeState('recipes')
+          angular.element(document.getElementById('HeaderController')).scope().changeState('main.recipes');
           angular.element(document.getElementById('HeaderController')).scope().retrieveRecipes($searchtext.val());
           $search.fadeOut(200);
           $searchtext.blur().hide();
@@ -57,7 +57,6 @@ $(document).ready(function() {
     }
   });
 });
-
 
 /*============================================
 =            Video Player Section            =
